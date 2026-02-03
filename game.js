@@ -1,10 +1,5 @@
-window.addEventListener("load", () => {
-  const canvas = document.getElementById("game");
-  if (!canvas) {
-    console.error("Pac-Man canvas element not found.");
-    return;
-  }
-  const ctx = canvas.getContext("2d");
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
 
 const TILE = 16;
 const COLS = 28;
@@ -385,8 +380,7 @@ function loop(timestamp) {
   requestAnimationFrame(loop);
 }
 
-  initPellets();
-  updateScore();
-  handleInput();
-  requestAnimationFrame(loop);
-});
+initPellets();
+updateScore();
+handleInput();
+requestAnimationFrame(loop);
